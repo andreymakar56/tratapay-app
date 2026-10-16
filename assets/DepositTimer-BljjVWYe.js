@@ -1,0 +1,6 @@
+import{c as u,r as t,j as s}from"./index-CNShM0N3.js";import{C as h}from"./clock-Cc6QdEPt.js";/**
+ * @license lucide-react v0.453.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const j=u("Download",[["path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",key:"ih7n3h"}],["polyline",{points:"7 10 12 15 17 10",key:"2ggqvy"}],["line",{x1:"12",x2:"12",y1:"15",y2:"3",key:"1vk2je"}]]);function y({expiresAt:a,onExpire:n}){const[o,f]=t.useState(0),[i,l]=t.useState(!1);t.useEffect(()=>{l(!1)},[a]),t.useEffect(()=>{const e=()=>{const c=Date.now(),p=new Date(a).getTime(),m=Math.max(0,Math.floor((p-c)/1e3));f(m),m===0&&!i&&(l(!0),n&&n())};e();const r=setInterval(e,1e3);return()=>clearInterval(r)},[a,i,n]);const x=e=>{const r=Math.floor(e/60),c=e%60;return`${r}:${c.toString().padStart(2,"0")}`};if(o===0)return s.jsx("span",{className:"text-red-600 font-bold text-sm",children:"Истекло"});const d=o<=120;return s.jsxs("div",{className:`flex items-center gap-2 ${d?"text-red-600":"text-green-600"}`,children:[s.jsx(h,{className:"w-4 h-4"}),s.jsx("span",{className:"font-bold text-sm",children:x(o)})]})}export{y as D,j as a};
